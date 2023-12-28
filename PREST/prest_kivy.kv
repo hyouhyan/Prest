@@ -1,0 +1,204 @@
+<MainScreen>:
+    canvas.before:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    BoxLayout:
+        orientation: 'vertical'
+
+        BoxLayout:
+
+            FloatLayout:
+                id: main_float
+
+                FloatLayout:
+
+                    Image:
+                        id: left_image
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.3}
+                    Image:
+                        id: finger_l01
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.3}
+                    Image:
+                        id: finger_l02
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.3}
+                    Image:
+                        id: finger_l03
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.3}
+                    Image:
+                        id: finger_l04
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.3}
+                    Image:
+                        id: finger_l05
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.3}
+
+                    Label:
+                        id: left_label
+                        text: ""
+                        color: 0, 0, 0, 1
+                        font_size: 40
+                        pos_hint: {"top":0.90, "center_x":0.3}
+
+                FloatLayout:
+
+                    Image:
+                        id: right_image
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.7}
+                    Image:
+                        id: finger_r01
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.7}
+                    Image:
+                        id: finger_r02
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.7}
+                    Image:
+                        id: finger_r03
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.7}
+                    Image:
+                        id: finger_r04
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.7}
+                    Image:
+                        id: finger_r05
+                        source: './image/none.png'
+                        pos_hint: {"top":1.2, "center_x":0.7}
+
+                    Label:
+                        id: right_label
+                        text: ""
+                        color: 0, 0, 0, 1
+                        font_size: 40
+                        pos_hint: {"top":0.90, "center_x":0.7}
+
+                Image:
+                    id: main_image
+                    source: './image/logo.png'
+                    pos_hint: {"top":1.05}
+                Image:
+                    id: finger01
+                    source: './image/none.png'
+                    pos_hint: {"top":1.05}
+                Image:
+                    id: finger02
+                    source: './image/none.png'
+                    pos_hint: {"top":1.05}
+                Image:
+                    id: finger03
+                    source: './image/none.png'
+                    pos_hint: {"top":1.05}
+                Image:
+                    id: finger04
+                    source: './image/none.png'
+                    pos_hint: {"top":1.05}
+                Image:
+                    id: finger05
+                    source: './image/none.png'
+                    pos_hint: {"top":1.05}
+
+                Label:
+                    id: main_label
+                    text: "ようこそ、最先端へ"
+                    color: 0, 0, 0, 1
+                    font_size: 40
+                    pos_hint: {"top":0.69}
+
+                Label:
+                    id: sub_label
+                    text: ""
+                    color: 0, 0, 0, 1
+                    font_size: 35
+                    pos_hint: {"top":0.62}
+
+                Spinner:
+                    id: main_spinner
+                    background_color: (0,0,0,0)
+                    pos_hint: {"top":0.13, "center_x":0.5}
+                    size: 50, 100
+                    size_hint_y: None
+                    size_hint_x: 0.4
+                    text: 'クリックしてカメラを選択'
+                    values: ''
+
+
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint_y: 0.15
+
+            BoxLayout:
+                size_hint_x: 2.5
+            Button:
+                id: button_back
+                background_color: (0,0,0,0)
+                on_press: root.button_ch_b()
+                on_release: root.button_clicked_b()
+
+                Image:
+                    id: image_back
+                    source: './image/back_gr.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            BoxLayout:
+                size_hint_x: 0.5
+                Button:
+                    id: button_center
+                    background_color: (0,0,0,0)
+                    on_press: root.button_ch_c()
+                    on_release: root.button_clicked_c()
+
+                    Image:
+                        id: image_center
+                        source: './image/none.png'
+                        center_x: self.parent.center_x
+                        center_y: self.parent.center_y
+
+            Button:
+                id: button_next
+                background_color: (0,0,0,0)
+                on_press: root.button_ch_n()
+                on_release: root.button_clicked_n()
+                Image:
+                    id: image_next
+                    source: './image/next_gr.png'
+                    center_x: self.parent.center_x
+                    center_y: self.parent.center_y
+
+            BoxLayout:
+                size_hint_x: 2.5
+
+        BoxLayout:
+            size_hint_y: 0.05
+
+<FingerSelector>:
+    id: finger_selector
+    BoxLayout:
+        orientation: 'horizontal'
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        size_hint_x: 0.35
+        CheckBox:
+            id: box1
+            on_press: root.press(0)
+        CheckBox:
+            id: box2
+            on_press: root.press(1)
+        CheckBox:
+            id: box3
+            on_press: root.press(2)
+        CheckBox:
+            id: box4
+            on_press: root.press(3)
+        CheckBox:
+            id: box5
+            on_press: root.press(4)
