@@ -1,5 +1,4 @@
 import mediapipe as mp
-from playsound import playsound
 import cv2
 import pyautogui
 import subprocess
@@ -38,9 +37,7 @@ class Trac():
 
 
 def notify(title, text):
-    os.system("""
-              osascript -e 'display notification "{}" with title "{}"'
-              """.format(text, title))
+    os.system("""osascript -e 'display notification "{}" with title "{}"'""".format(text, title))
 
 
 def first():
@@ -102,7 +99,6 @@ def prest(fin):
 
     if first_prest:
         first_prest = False
-        playsound("notify.mp3")
         notify("開始", "プレゼンテーションを開始してください。")
         cap_set()
 
@@ -167,7 +163,6 @@ def prest(fin):
 
     elif fin:
         roop = False
-        playsound("notify.mp3")
         notify("終了", "プログラムが終了しました。")
 
         finger_status = "fin"
