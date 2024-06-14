@@ -33,7 +33,8 @@ python Prest_mac.py
 3. カメラの前に手をかざし、操作を開始してください。
 4. 終了後、設定を保存するか選択してください。
 ### 設定リセット方法
-PRESTフォルダ内の"settings.prt"ファイルを削除してください。
+PRESTフォルダ内の"settings.prt"ファイルを削除してください。  
+"settings.prt"が存在しない場合、設定が保存されていない可能性があります。
 
 # Contributor
 - System [@KlTUNE](https://github.com/KlTUNE)
