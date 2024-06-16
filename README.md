@@ -6,7 +6,7 @@ Prestでは、プレゼンテーション時の操作を遠隔で行うことを
 PRESTフォルダ内の"Trac_mac.py"を利用することでプレゼンテーション以外でも利用することができます。  
 ### 対応OS : MacOS
 
-# 事前準備
+## 事前準備
 ### pythonのインストール
 python3.9をインストールしてください。3.9以外のバージョンの動作確認はしていません。
 ### pythonライブラリのインストール
@@ -21,7 +21,7 @@ pip install japanize-kivy
 pip install -r requirements.txt
 </pre>
 
-# 使用方法
+## 使用方法
 <pre>
 python3 Prest_mac.py
         OR
@@ -37,7 +37,7 @@ python Prest_mac.py
 PRESTフォルダ内の"settings.prt"ファイルを削除してください。  
 "settings.prt"が存在しない場合、設定が保存されていない可能性があります。
 
-# Contributor
+## Contributor
 - System [@KlTUNE](https://github.com/KlTUNE)
 - GUI [@Hyouhyan](https://github.com/hyouhyan)
 - WEB [@]()
