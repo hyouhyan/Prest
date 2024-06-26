@@ -14,7 +14,6 @@ python3.9をインストールしてください。3.9以外のバージョン�
 pip install mediapipe
 pip install opencv-python
 pip install pyautogui
-pip install playsound
 pip install kivy
 pip install japanize-kivy
         OR
