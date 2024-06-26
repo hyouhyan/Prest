@@ -10,8 +10,6 @@ echo "uninstall opencv"
 python3 -m pip uninstall -y opencv-python
 echo "uninstall pyautogui"
 python3 -m pip uninstall -y pyautogui
-echo "uninstall playsound"
-python3 -m pip uninstall -y playsound
 echo "install kivy"
 python3 -m pip uninstall -y kivy
 python3 -m pip uninstall -y japanize-kivy
